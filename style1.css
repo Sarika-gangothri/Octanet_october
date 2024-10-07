@@ -1,0 +1,177 @@
+/* Custom styles for RadioBridge landing page */
+
+:root {
+    --blue: #4285F4;
+    --green: #34A853;
+    --yellow: #FBBC05;
+    --red: #EA4335;
+    --purple: #A142F4;
+    --light-blue: #7EB6FF;
+    --white: #FFFFFF;
+    --light-gray: #F3F4F6;
+    --dark-gray: #1F2937;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+    background-color: var(--dark-gray);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--white) !important;
+}
+
+.navbar-brand span:nth-child(1) { color: var(--blue); }
+.navbar-brand span:nth-child(2) { color: var(--purple); }
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--light-blue);
+}
+
+.hero {
+    background: linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.7)), url('walkieweb.webp') no-repeat center center;
+    background-size: cover;
+    color: var(--white);
+    padding: 150px 0;
+    margin-top: 56px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: var(--white);
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-box:nth-child(1) { background-color: #6A5ACD; }
+.feature-box:nth-child(2) { background-color: #4CAF50; }
+.feature-box:nth-child(3) { background-color: #FFA500; color: var(--dark-gray); }
+.feature-box:nth-child(4) { background-color: #FF6347; }
+.feature-box:nth-child(5) { background-color: #9370DB; }
+.feature-box:nth-child(6) { background-color: #6A5ACD; }
+
+#benefits {
+    background-color: var(--light-gray);
+}
+
+#benefits ul {
+    padding-left: 20px;
+}
+
+#benefits li {
+    margin-bottom: 10px;
+}
+
+#contact {
+    background-color: var(--white);
+}
+
+.form-control {
+    border: 2px solid var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+/* Animated underline effect for navbar links */
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--light-blue);
+    transition: width 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Pulsing effect for CTA button */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(66, 133, 244, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+    }
+}
+
+.btn-primary {
+    animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
